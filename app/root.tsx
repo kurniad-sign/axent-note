@@ -4,12 +4,17 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+  useHref,
+  useNavigate,
+} from '@remix-run/react';
+import { NextUIProvider } from '@nextui-org/react';
 
-import "./styles/fonts.css";
-import "./styles/tailwind.css";
+import './styles/fonts.css';
+import './styles/tailwind.css';
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const navigate = useNavigate();
+
   return (
     <html lang="en">
       <head>
@@ -19,9 +24,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+        <NextUIProvider navigate={navigate} useHref={useHref}>
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </NextUIProvider>
       </body>
     </html>
   );
