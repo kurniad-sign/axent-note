@@ -1,29 +1,11 @@
-import { Heading } from '../atom';
+import { Header, Sidebar } from '../moleculs';
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex h-full w-full">
-      <aside className="relative flex w-72 min-w-[210px] max-w-[420px] shrink-0 bg-grey-100">
-        <div className="flex grow flex-wrap items-center justify-center">
-          <Heading component="h3" variant="title-4" align="center">
-            Sidebar Component
-          </Heading>
-        </div>
-      </aside>
+      <Sidebar />
       <section className="relative z-[1] flex min-h-[380px] grow flex-col shadow-md">
-        <header
-          aria-label="header content"
-          className="relative flex h-20 shrink-0 flex-col px-7 border-b"
-        >
-          <div className="flex w-full max-w-screen-lg grow self-center">
-            <div className="flex shrink-0 grow items-center">
-              <Heading component="h2" weight="bold">
-                Today
-              </Heading>
-            </div>
-            <div className="flex h-full items-center">Avatar</div>
-          </div>
-        </header>
+        <Header />
         <main
           aria-label="main content"
           className="relative flex shrink-0 grow flex-col px-7"

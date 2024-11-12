@@ -2,7 +2,7 @@ import { Button } from '@nextui-org/button';
 import type { MetaFunction } from '@remix-run/node';
 
 import { Heading, Text } from '~/components/atom';
-import { AppLayout } from '~/components/layouts/AppLayout';
+import { AppLayout } from '~/components/layouts';
 
 export const meta: MetaFunction = () => {
   return [
