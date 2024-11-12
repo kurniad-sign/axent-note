@@ -4,12 +4,13 @@
  * For more information, see https://remix.run/file-conventions/entry.server
  */
 
-import { PassThrough } from 'node:stream';
 import type { AppLoadContext, EntryContext } from '@remix-run/node';
 import { createReadableStreamFromReadable } from '@remix-run/node';
 import { RemixServer } from '@remix-run/react';
 import { isbot } from 'isbot';
+import { PassThrough } from 'node:stream';
 import { renderToPipeableStream } from 'react-dom/server';
+import { createHonoServer } from 'react-router-hono-server/node';
 
 const ABORT_DELAY = 5_000;
 
@@ -137,3 +138,5 @@ function handleBrowserRequest(
     setTimeout(abort, ABORT_DELAY);
   });
 }
+
+export const server = await createHonoServer();

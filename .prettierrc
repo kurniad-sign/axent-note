@@ -6,13 +6,15 @@
   "singleQuote": true,
   "printWidth": 80,
   "importOrder": [
-    "^(@remix-run/(.*)$)|^(@remix-run$)",
     "^(react/(.*)$)|^(react$)",
+    "^(@remix-run/(.*)$)|^(@remix-run$)",
     "<THIRD_PARTY_MODULES>",
     "",
-    "^~/app/styles/(.*)$",
+    "^~/components/(.*)$",
     "",
-    "^~app/types/(.*)$",
+    "^~/styles/(.*)$",
+    "",
+    "^~/types/(.*)$",
     "",
     "^[./]"
   ],

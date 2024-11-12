@@ -1,3 +1,4 @@
+import { NextUIProvider } from '@nextui-org/react';
 import {
   Links,
   Meta,
@@ -7,7 +8,6 @@ import {
   useHref,
   useNavigate,
 } from '@remix-run/react';
-import { NextUIProvider } from '@nextui-org/react';
 
 import './styles/fonts.css';
 import './styles/tailwind.css';
@@ -24,7 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <NextUIProvider navigate={navigate} useHref={useHref}>
+        <NextUIProvider navigate={navigate} useHref={useHref} disableRipple>
           {children}
           <ScrollRestoration />
           <Scripts />

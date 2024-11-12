@@ -1,4 +1,5 @@
 import { vitePlugin as remix } from "@remix-run/dev";
+import { devServer } from 'react-router-hono-server/dev';
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
@@ -9,6 +10,9 @@ declare module "@remix-run/node" {
 }
 
 export default defineConfig({
+  build: {
+    target: 'esnext'
+  },
   plugins: [
     remix({
       future: {
@@ -19,6 +23,7 @@ export default defineConfig({
         v3_lazyRouteDiscovery: true,
       },
     }),
+    devServer(),
     tsconfigPaths(),
   ],
 });
