@@ -2,6 +2,7 @@ import { Button } from '@nextui-org/button';
 import type { MetaFunction } from '@remix-run/node';
 
 import { Heading, Text } from '~/components/atom';
+import { AppLayout } from '~/components/layouts/AppLayout';
 
 export const meta: MetaFunction = () => {
   return [
@@ -12,7 +13,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <>
+    <AppLayout>
       <Heading component="h1">Heading One</Heading>
       <Text component="span">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident,
@@ -20,6 +21,6 @@ export default function Index() {
         fugiat ipsa exercitationem minus quaerat iure quisquam, velit quo autem.
       </Text>
       <Button>Sample Button</Button>
-    </>
+    </AppLayout>
   );
 }

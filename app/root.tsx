@@ -24,7 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <NextUIProvider navigate={navigate} useHref={useHref} disableRipple>
+        <NextUIProvider className='h-dvh w-full' navigate={navigate} useHref={useHref} disableRipple>
           {children}
           <ScrollRestoration />
           <Scripts />
