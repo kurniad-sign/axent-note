@@ -19,6 +19,7 @@
     "framer-motion": "^11.11.11",
     "hono": "^4.6.9",
     "isbot": "^4.1.0",
+    "lucide-react": "^0.456.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-hono-server": "^1.1.0"
