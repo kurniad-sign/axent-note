@@ -2,6 +2,8 @@ import type { MetaFunction } from '@remix-run/node';
 
 import { Heading, Text } from '~/components/atom';
 import { AppLayout } from '~/components/layouts';
+import { TodoInput } from '~/components/moleculs';
+
 import useGreetingMessage from '~/hooks/useGreetingMessage';
 
 export const meta: MetaFunction = () => {
@@ -22,6 +24,10 @@ export default function Index() {
         <Text size="small" className="text-office-brown-700">
           What do you want to achieve today? 🎯
         </Text>
+      </div>
+      <div className="mb-6 flex w-full grow flex-col">
+        <TodoInput />
+        <div className="relative mt-4">Todo Item</div>
       </div>
     </AppLayout>
   );
